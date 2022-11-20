@@ -20,7 +20,7 @@ func main() {
 		In:       flag.String("in", "", "input file or directory"),
 		Out:      flag.String("out", "", "output directory"),
 		Lang:     flag.String("lang", "c", "language to generate"),
-		Validate: flag.Bool("validate", false, "don't output, only validate input files"),
+		Verify: flag.Bool("verify", false, "don't output, only validate input files"),
 	}
 
 	flag.Parse()
