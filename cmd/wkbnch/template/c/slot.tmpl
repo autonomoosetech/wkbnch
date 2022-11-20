@@ -1,0 +1,20 @@
+#include "inttypes.h"
+
+typedef struct {
+	float max;
+	float min;
+	float offset;
+	uint8_t size;
+	char unit [];
+} schemacan_slot_t;
+
+{{ range . }}
+schemacan_slot_t test = {
+	{{ .Max }},
+	{{ .Min }},
+	{{ .Offset }},
+	{{ .Size }},
+	"{{ .Unit }}"
+};
+
+{{end}}
