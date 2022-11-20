@@ -5,7 +5,7 @@ Pronounced workbench, wkbnch is a tool for SchemaCAN translation and code genera
 ## Installation
 
 ```bash
-go get github.com/AutonoMooseTech/wkbnch
+go get github.com/autonomoosetech/wkbnch
 ```
 
 wkbnch will come to package managers once it reaches v1.0.0
@@ -40,8 +40,8 @@ in: ./schema-cam-manifests/
 out: ./include/
 lang: c
 remotes:
-  - github.com/AutonoMooseTech/schema-can-tritium-solar-racing:v1.0.0
-  - github.com/AutonoMooseTech/schema-can-elmar-mppt:v1.0.0
+  - github.com/autonomoosetech/schema-can-tritium-solar-racing:v1.0.0
+  - github.com/autonomoosetech/schema-can-elmar-mppt:v1.0.0
 ```
 
 Running `wkbnch` in the same directory as the above file will automatically pick up the file 
