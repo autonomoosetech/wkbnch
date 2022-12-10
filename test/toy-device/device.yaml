@@ -1,0 +1,21 @@
+version: v1
+type: device
+metadata:
+  name: toy
+spec:
+  messages:
+    - button-state
+---
+version: v1
+type: message
+metadata:
+  name: button-state
+spec:
+  id:
+    standard: 0x123
+  data:
+    - name: state
+      type: bool
+    - padding: 4
+    - name: pressure
+      type: u8
