@@ -1,3 +1,4 @@
+// slot
 #include "inttypes.h"
 
 typedef struct {
@@ -8,13 +9,13 @@ typedef struct {
 	char unit [];
 } schemacan_slot_t;
 
+// generated data slots
 {{ range . }}
 schemacan_slot_t test = {
-	{{ .Max }},
+	{{ .Spec.Max }},
 	{{ .Min }},
 	{{ .Offset }},
 	{{ .Size }},
 	"{{ .Unit }}"
 };
-
-{{end}}
+{{ end }}

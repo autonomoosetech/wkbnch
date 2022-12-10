@@ -1,0 +1,7 @@
+// message
+#include "inttypes.h"
+
+// {{.Metadata.Name}}
+typedef struct __attribute__((__packed__)) {
+{{range .Spec.Data}}{{if .Padding }}char : {{.Padding}}; // padding{{else}}{{.Type | signalString}}{{end}}
+{{end}}} message_data_t;
