@@ -22,8 +22,8 @@ test: vet ## Run tests
 
 .PHONY: install
 install: test ## Install as executable
-	go install -v ./...
+	go install -v main.go
 
 .PHONY: build
 build: test ## Build executable
-	go build -v -o bin/ ./...
+	go build -v -o ./bin/wkbnch main.go
